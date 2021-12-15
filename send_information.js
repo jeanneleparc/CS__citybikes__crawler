@@ -31,13 +31,14 @@ amqp.connect('amqp://localhost', function(error0, connection) {
         const stations = await get(url);
         const stations_stringify = JSON.stringify(stations);
 
-        var queue = 'hello';
+        var queue = 'information';
 
         channel.assertQueue(queue, {
             durable: false
         });
         channel.sendToQueue(queue,  Buffer.from(stations_stringify));
-        console.log(" [x] Sent %s", stations_stringify);
+        // console.log(" [x] Sent %s", stations_stringify);
+        console.log("Information Send");
     });
     setTimeout(function() {
         connection.close();
