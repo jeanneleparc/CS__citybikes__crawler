@@ -37,7 +37,6 @@ amqp.connect('amqp://localhost', function(error0, connection) {
             durable: false
         });
         channel.sendToQueue(queue,  Buffer.from(stations_stringify));
-        // console.log(" [x] Sent %s", stations_stringify);
         console.log("Status Send");
     });
     setTimeout(function() {

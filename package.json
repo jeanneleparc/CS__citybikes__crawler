@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "information": "nodemon send_information",
     "status": "nodemon send_status",
-    "cron-status": "nodemon cron-status",
-    "cron-information": "nodemon cron-information"
+    "dev": "nodemon cron-station"
   },
   "repository": {
     "type": "git",
