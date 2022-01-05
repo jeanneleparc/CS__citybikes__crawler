@@ -24,5 +24,8 @@
     "express": "^4.17.1",
     "node-cron": "^3.0.0",
     "xhr2": "^0.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
