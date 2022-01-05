@@ -16,9 +16,10 @@ async function get(url) {
       xhr.send(null);
   });
 }
+const AMQP_URL = process.env.AMQP_URL || 'amqp://localhost';
 
 cron.schedule('*/10 * * * *', function() {
-    amqp.connect('amqp://localhost', function(error0, connection) {
+    amqp.connect(AMQP_URL, function(error0, connection) {
         if (error0) {
             throw error0;
         }
@@ -48,7 +49,7 @@ cron.schedule('*/10 * * * *', function() {
   });
 
 cron.schedule('* * * * *', function() {
-    amqp.connect('amqp://localhost', function(error0, connection) {
+    amqp.connect(AMQP_URL, function(error0, connection) {
         if (error0) {
             throw error0;
         }
