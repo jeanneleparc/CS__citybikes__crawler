@@ -17,8 +17,11 @@ async function get(url) {
     });
 }
 
+const AMQP_URL = process.env.AMQP_URL || 'amqp://localhost';
+
+
 // connection to rabbitMQ and fetch data
-amqp.connect('amqp://localhost', function(error0, connection) {
+amqp.connect(AMQP_URL, function(error0, connection) {
     if (error0) {
         throw error0;
     }
@@ -37,7 +40,7 @@ amqp.connect('amqp://localhost', function(error0, connection) {
             durable: false
         });
         channel.sendToQueue(queue,  Buffer.from(stations_stringify));
-        console.log(" [x] Sent %s", stations_stringify);
+        console.log(" [x] Sent");
     });
     setTimeout(function() {
         connection.close();
