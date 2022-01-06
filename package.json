@@ -5,7 +5,9 @@
   "main": "send.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon send"
+    "information": "nodemon send_information",
+    "status": "nodemon send_status",
+    "dev": "nodemon cron-station"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,7 @@
   "homepage": "https://github.com/jeanneleparc/CS__citybikes__crawler#readme",
   "dependencies": {
     "amqplib": "^0.8.0",
-    "express": "^4.17.1",
+    "node-cron": "^3.0.0",
     "xhr2": "^0.2.1"
   },
   "devDependencies": {
