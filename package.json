@@ -12,7 +12,7 @@
     "prettier": "eslint . --fix"
   },
   "gitHooks": {
-    "pre-push": "npm run prettier"
+    "pre-commit": "npm run lint"
   },
   "repository": {
     "type": "git",
