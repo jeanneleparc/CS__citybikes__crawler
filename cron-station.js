@@ -41,8 +41,8 @@ amqp.connect(AMQP_URL, (error0, connection) => {
   }, 10000);
 });
 
-// schedule a cron task to fetch the information of the stations every 10min
-cron.schedule("*/10 * * * *", () => {
+// schedule a cron task to fetch the information of the stations every day at midnight
+cron.schedule("0 0 * * *", () => {
   amqp.connect(AMQP_URL, (error0, connection) => {
     if (error0) {
       throw error0;
