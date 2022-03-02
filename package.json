@@ -8,6 +8,7 @@
     "information": "nodemon send_information",
     "status": "nodemon send_status",
     "dev": "nodemon cron-station",
+    "serve": "node cron-station.js",
     "lint": "eslint ./",
     "prettier": "eslint . --fix"
   },
