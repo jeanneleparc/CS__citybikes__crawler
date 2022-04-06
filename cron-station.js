@@ -68,7 +68,7 @@ cron.schedule("0 0 * * *", () => {
   console.log("Fetch information");
 });
 
-// schedule a cron task to fetch the status of the stations every min
+// schedule a cron task to fetch the status of the stations every 30 secondes
 cron.schedule("*/30 * * * * *", () => {
   amqp.connect(AMQP_URL, (error0, connection) => {
     if (error0) {
