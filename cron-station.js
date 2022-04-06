@@ -69,7 +69,7 @@ cron.schedule("0 0 * * *", () => {
 });
 
 // schedule a cron task to fetch the status of the stations every min
-cron.schedule("* * * * *", () => {
+cron.schedule("*/30 * * * * *", () => {
   amqp.connect(AMQP_URL, (error0, connection) => {
     if (error0) {
       throw error0;
